@@ -5,9 +5,12 @@
 
 PROGRAM = rarbg_catalog
 PROGRAM_DEBUG = rarbg_catalog-debug
-SRC = src/application.vala 
+SRC = src/application.vala \
+			src/controller/root_controller.vala \
+			src/view/root_view.vala \
+			src/model/status_model.vala
 
-PKGS = --pkg gtk+-3.0
+PKGS = --pkg gtk+-3.0 --pkg gmodule-2.0
 VALAC = valac
 VALACOPTS = -X -O2
 VALACOPTS_DEBUG = -g #--save-temps
